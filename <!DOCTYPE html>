@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto Mute and Skip</title>
+</head>
+
+<body>
+  <video id="myVideo" controls>
+    <source src="your_video_file.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var video = document.getElementById('myVideo');
+      
+      // Mute the video on load
+      video.muted = true;
+
+      // Wait for 10 seconds then skip forward 20 seconds
+      setTimeout(function() {
+        video.currentTime += 20;
+      }, 10000);
+    });
+  </script>
+</body>
+
+</html>
